@@ -1,6 +1,3 @@
+import tensorflow as tf
 
-
-def hello():
-    print("Hello World!")
-
-hello()
+print(tf.__version__)
