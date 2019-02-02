@@ -5,7 +5,7 @@
 
 CASP (Critical Assessment of protein Structure Prediction)
 
-This is a biennial competition in Bioinformatics where teams are tasked with predicting the structure (among other things) of proteins given the ammino-acid sequences.
+This is a biennial competition in Bioinformatics where teams are tasked with predicting the structure of proteins given the ammino-acid sequences.
 
 ### Outside Help
 
