@@ -1,7 +1,10 @@
 absl-py==0.7.0
 astor==0.7.1
 backcall==0.1.0
+<<<<<<< HEAD
 cycler==0.10.0
+=======
+>>>>>>> 2573c56... updated requirements with ipykernel
 decorator==4.3.2
 gast==0.2.2
 grpcio==1.18.0
@@ -26,7 +29,10 @@ prompt-toolkit==2.0.8
 protobuf==3.6.1
 ptyprocess==0.6.0
 Pygments==2.3.1
+<<<<<<< HEAD
 pyparsing==2.3.1
+=======
+>>>>>>> 2573c56... updated requirements with ipykernel
 python-dateutil==2.7.5
 pytz==2018.9
 pyzmq==17.1.2
