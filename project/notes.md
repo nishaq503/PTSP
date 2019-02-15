@@ -18,3 +18,8 @@
 * This can also be treated as unsupervised learning by minimizing folding time and potential energy as metrics.
 * This can possibly be treated as a hybrid model by using training examples to learn a relationship between primary structure and potential energy of tertiary structure. We could then use generated ammino acid sequences to train the model using reinforcement learning.
 * As Tom pointed out, the tertiary structure screams graph. I guess a grad course on graph theory CAN be useful in real life. The idea is very good and will almost certainly be used here. At the very least, it will allow for rotational and translational invariance when comparing tertiary structures.
+
+**Are there partial-sequences for which the model predicts very accurate tertiary structures?**
+* Calculate the accuracy for partial sequences to see if there are sections for which the model makes excellent predictions.
+* If there are such partial sequences, incorporate them into further predictions and use a vector of "edit costs" to discourage changing these partial strictures in the full prediction.
+* Could use partial sequences and partial structures to train model.
