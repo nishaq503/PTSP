@@ -6,7 +6,7 @@
 
 * PSSM: position specific scoring matrix. stores propensity of ammino acids to morph into other ammino acids. (shape 21 x n)
 
-* Tertiary Structure: 3D structure of C_alpha, C', and N atoms in the backbone of the protein after it is done folding up. (shape 3 x 3n)
+* Tertiary Structure: 3D structure of N, C_alpha, and C' atoms in the backbone of the protein after it is done folding up. This is made up of n 3x3 matrices where the rows are x, y, and z coordinates respectively and the columns correspond to N, C_alpha, and C' atoms respectively. (shape 3 x 3n).
 
 * Mask: one-bit indicator of when protein residue information is present. This is to keep the loss function from penalizing predictions made for atoms for which residue information is not present. (length n)
 
