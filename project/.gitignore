@@ -2,3 +2,4 @@ data
 .ipynb_checkpoints
 psipred
 deepcnf
+__pycache__
