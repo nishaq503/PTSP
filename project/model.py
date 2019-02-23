@@ -1,7 +1,7 @@
 import tensorflow as tf
 
 
-class CASP_Supervised_Model():
+class Model:
     """
     A class containing the computational graph for protein tertiary structure prediction using supervised learning
     """
@@ -17,7 +17,7 @@ class CASP_Supervised_Model():
         :param keep_prob: contains dropout probability
         """
 
-        self.primary = sequence
+        self.primary = primary
         self.pssm = pssm
         self.mask = mask
         self.answer = answer
