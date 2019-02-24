@@ -48,12 +48,12 @@ def string_to_num_list(string, dict_):
     return [int(i) for i in num_string.split()]
 
 
-def record_to_dict(infile, num_entries):
+def file_to_dict(infile, num_entries):
     """
 
     :param infile: file to read
     :param num_entries: pssm entries
-    :return:
+    :return: dictionary that was created
     """
     # Dictionaries for dealing with input data
     _aa_dict = {'A': '0', 'C': '1', 'D': '2', 'E': '3', 'F': '4', 'G': '5', 'H': '6', 'I': '7', 'K': '8', 'L': '9',
@@ -112,7 +112,9 @@ def dict_to_tfrecord(dict_):
     id_ = _bytes_feature([dict_['id']])
 
     feature_lists_dict = {}
-    feature_lists_dict.update({'primary': _feature_list([_int64_feature([aa]) for aa in dict_['primary']])})
+    feature_lists_dict.update(
+        {'primary': _feature_list([_int64_feature([aa]) for aa in dict_['primary']])}
+    )
 
     if 'evolutionary' in dict_:
         feature_lists_dict.update(
@@ -133,9 +135,9 @@ def dict_to_tfrecord(dict_):
             {'mask': _feature_list([_float_feature([step]) for step in dict_['mask']])}
         )
 
-    record = tf.train.SequenceExample(
+    tfrecord = tf.train.SequenceExample(
         context=_features({'id': id_}),
         feature_lists=_feature_lists(feature_lists_dict)
     )
 
-    return record
+    return tfrecord

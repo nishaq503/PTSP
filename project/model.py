@@ -6,21 +6,22 @@ class Model:
     A class containing the computational graph for protein tertiary structure prediction using supervised learning
     """
 
-    def __init__(self, primary, pssm, mask, answer, keep_prob):
+    def __init__(self, primary, pssm, mask, true_tertiary, keep_prob):
         """
         Model initializer
 
-        :param primary: ammino acid sequence. length n
+        :param primary: amino acid sequence. length n
         :param pssm: position specific scoring matrix. shape 21 x n
-        :param mask: string of one-bit indicators showing which ammino acids are not to be penalized when computing loss. length n
-        :param answer: correct tertiary structure
+        :param mask: string of one-bit indicators showing which amino acids are not to be penalized when computing loss.
+                     length n
+        :param true_tertiary: correct tertiary structure
         :param keep_prob: contains dropout probability
         """
 
         self.primary = primary
         self.pssm = pssm
         self.mask = mask
-        self.answer = answer
+        self.answer = true_tertiary
         self.keep_prob = keep_prob
 
         self.secondary = self.predict_secondary_structure()
