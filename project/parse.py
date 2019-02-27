@@ -2,7 +2,7 @@ import sys
 
 import tensorflow as tf
 
-from project.utilities import file_to_dict, dict_to_tfrecord
+from project.utils import file_to_dict, dict_to_tfrecord
 
 
 def text_to_tfrecord(input_path, output_path, num_entries):

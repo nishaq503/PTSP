@@ -30,6 +30,8 @@ class Model:
         self.optimize = self.optimizing_function()
         self.accuracy = self.accuracy_function()
 
+        return
+
     def predict_secondary_structure(self):
         """
         This will use DeepCNF.

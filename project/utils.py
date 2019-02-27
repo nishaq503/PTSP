@@ -5,12 +5,6 @@ import tensorflow as tf
 # Constants
 NUM_DIMENSIONS = 3
 
-# helpers for dealing with TF Example etc and make code more verbose
-# Accessory functions for dealing with TF Example and SequenceExample
-_example = tf.train.Example
-_sequence_example = tf.train.SequenceExample
-_feature = tf.train.Feature
-
 
 def _features(d):
     return tf.train.Features(feature=d)
