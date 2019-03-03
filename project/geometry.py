@@ -63,3 +63,17 @@ def reduce_l2_norm(_input,
                                   epsilon),
                        name=scope)
 
+
+def pairwise_distances(_input, name=None):
+    """
+    computes the pairwise distances between all vectors in the input.
+    vectors are to be in 3-D
+    :param _input: tensor-like input [num_steps, batch_sz, num_dimensions]
+    :param name: optional name
+    :return: pairwise distances between vectors in _input [num_steps, num_steps, batch_sz]
+    """
+    with tf.name_scope(name, 'pairwise_distances', [_input]) as scope:
+        input_tensor = tf.convert_to_tensor(_input, name='input')
+        return reduce_l2_norm(input_tensor - tf.expand_dims(input_tensor, 1),
+                              reduction_indexes=[3],
+                              name=scope)
