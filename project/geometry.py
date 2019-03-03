@@ -77,3 +77,22 @@ def pairwise_distances(_input, name=None):
         return reduce_l2_norm(input_tensor - tf.expand_dims(input_tensor, 1),
                               reduction_indexes=[3],
                               name=scope)
+
+
+def drmsd(x, y, weights, name=None):
+    """
+    computes the dRMSD of two tensors of vectors.
+    :param x: tensor-like input containing 3-D vectors [num_steps, batch_sz, num_dimensions]
+    :param y: tensor-like input containing 3-D vectors [num_steps, batch_sz, num_dimensions]
+    :param weights: tensor-like weights [num_steps, num_steps, batch_sz]
+    :param name: optional name
+    :return: dRMSD between x and y. [batch_sz]
+    """
+    with tf.name_scope(name, 'dRMSD', [x, y, weights]) as scope:
+        x_tensor = tf.convert_to_tensor(x, name='x')
+        y_tensor = tf.convert_to_tensor(y, name='y')
+        weights_tensor = tf.convert_to_tensor(weights, name='weights')
+        return reduce_l2_norm(pairwise_distances(x_tensor) - pairwise_distances(y_tensor),
+                              reduction_indexes=[0, 1],
+                              weights=weights_tensor,
+                              name=scope)
