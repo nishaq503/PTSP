@@ -25,7 +25,7 @@ def text_to_tfrecord(input_path, output_path, num_entries):
     return
 
 
-if __name__ == '__main__':
-    file_in, file_out = sys.argv[1], sys.argv[2]
-    entries = int(sys.argv[3]) if len(sys.argv) == 4 else 20
-    text_to_tfrecord(file_in, file_out, entries)
+# if __name__ == '__main__':
+#     file_in, file_out = sys.argv[1], sys.argv[2]
+#     entries = int(sys.argv[3]) if len(sys.argv) == 4 else 20
+#     text_to_tfrecord(file_in, file_out, entries)
