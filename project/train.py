@@ -1,11 +1,8 @@
 import tensorflow as tf
 
-from project.model import Model
-
 
 def main():
 
-    model = Model('A', [[1]], '+', [[1]], 1)
     print(tf.__version__)
 
     return
