@@ -20,7 +20,7 @@ def make_training_example(lines):
 
 
 def main():
-    with open('data/casp11/training_100', 'r') as raw_data:
+    with open('data/casp11/training_100') as raw_data:
         lines, examples = [], []
         for line in raw_data:
             lines.append(line)
@@ -32,7 +32,7 @@ def main():
 
     for example in examples:
         dssp_file = example['id'][:4].lower() + '.dssp'
-        with open('data/dssp/' + dssp_file, 'r') as raw_dssp:
+        with open('data/dssp/' + dssp_file) as raw_dssp:
             partial_primary, secondary = [], []
             flag = False
             for line in raw_dssp:
