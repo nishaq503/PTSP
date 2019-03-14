@@ -2,14 +2,15 @@ asn1crypto==0.24.0
 astroid==1.6.0
 backports.functools-lru-cache==1.4
 backports.shutil-get-terminal-size==1.0.0
+cffi==1.12.2
 chardet==3.0.4
 configparser==3.5.0
-cryptography==2.1.4
+cryptography==2.6.1
 decorator==4.1.2
 enum34==1.1.6
 futures==3.2.0
 idna==2.6
-ipaddress==1.0.17
+ipaddress==1.0.22
 ipython==5.5.0
 ipython-genutils==0.2.0
 isort==4.3.4
@@ -22,6 +23,7 @@ pathlib2==2.3.0
 pexpect==4.2.1
 pickleshare==0.7.4
 prompt-toolkit==1.0.15
+pycparser==2.19
 pycrypto==2.6.1
 Pygments==2.2.0
 pygobject==3.26.1
@@ -31,7 +33,7 @@ scandir==1.7
 SecretStorage==2.3.1
 simplegeneric==0.8.1
 singledispatch==3.4.0.3
-six==1.11.0
+six==1.12.0
 traitlets==4.3.2
 wcwidth==0.1.7
 wrapt==1.9.0
