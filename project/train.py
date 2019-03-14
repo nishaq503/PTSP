@@ -2,7 +2,10 @@ import tensorflow as tf
 
 
 def main():
+    """
 
+    :return:
+    """
     print(tf.__version__)
 
     return

@@ -1,7 +1,6 @@
 def make_training_example(lines):
-    """
-    Takes lines read from file and created a training example.
-    """
+    """ Takes lines read from file and created a training example. """
+
     example = {'id': lines[1].rstrip(),
                'primary': lines[3].rstrip(),
                'mask': lines[31].rstrip()}
@@ -20,6 +19,10 @@ def make_training_example(lines):
 
 
 def main():
+    """ main function.
+
+    :return:
+    """
     with open('data/casp11/training_100') as raw_data:
         lines, examples = [], []
         for line in raw_data:

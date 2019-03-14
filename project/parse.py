@@ -11,7 +11,7 @@ def text_to_tfrecord(input_path, output_path, num_entries):
     :param output_path: path of file to write.
     :param num_entries: number of entries.
     """
-    with open(input_path, 'r') as infile, tf.python_io.TFRecordWriter(output_path) as outfile:
+    with open(input_path) as infile, tf.python_io.TFRecordWriter(output_path) as outfile:
 
         while True:
             dict_ = file_to_dict(infile, num_entries)
